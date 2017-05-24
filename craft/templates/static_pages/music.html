@@ -1,0 +1,50 @@
+{#
+# sloan-evans.com Index Template
+# -------------------
+#
+# This template is loaded whenever http://sloan-evans.com is
+# requested,
+#
+#}
+
+{# ----- Import Any Required Macros ----- #}
+
+
+{# ----- Prepare Data ----- #}
+
+
+{# ----- Build Page ----- #}
+
+{% include "headers/header.html" with {'pageTitle' : 'Music - Sloan Evans Website', 'bodyClass': 'music'} %}
+<div class="music page section-padding">
+  <div class="container">
+    <div class="row margin-bottom">
+      <div class="col-md-12">
+        <h2 class="text-center">Music</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="margin-bottom__sm">
+          <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/311048568&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="margin-bottom__sm">
+          <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/299990730&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="margin-bottom__sm">
+          <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/287059798&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="margin-bottom__sm">
+          <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/279284429&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% include "footers/footer.html" %}

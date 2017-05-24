@@ -1,0 +1,28 @@
+ _______  .__        __   /\         __      __      ___.       _________ __            .___.__
+ \      \ |__| ____ |  | _)/ ______ /  \    /  \ ____\_ |__    /   _____//  |_ __ __  __| _/|__| ____
+ /   |   \|  |/ ___\|  |/ / /  ___/ \   \/\/   // __ \| __ \   \_____  \\   __\  |  \/ __ | |  |/  _ \
+/    |    \  \  \___|    <  \___ \   \        /\  ___/| \_\ \  /        \|  | |  |  / /_/ | |  (  <_> )
+\____|__  /__|\___  >__|_ \/____  >   \__/\  /  \___  >___  / /_______  /|__| |____/\____ | |__|\____/
+        \/        \/     \/     \/         \/       \/    \/          \/                 \/
+
+Developed and maintained by nickswebstudio.com
+Any questions or comments, please email nmann4789 [at] gmail [dot] com
+
+_______________________________________
+
+SLOANEVANS.COM WEBSITE DEVELOPMENT & DESIGN
+
+Nick Mann
+Development
+
+James Ku
+Design
+
+_______________________________________
+
+TECHNOLOGY
+
+Craft - Content Management
+craftcms.com
+
+

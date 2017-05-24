@@ -1,0 +1,608 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+// IMPORTING DATTODIN
+@font-face {
+  font-family: 'Gotham-Black';
+  font-weight: 100;
+  src: url('../fonts/Gotham-Black.eot'); /* IE9 Compat Modes */
+  url('../fonts/Gotham-Black.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../fonts/Gotham-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/Gotham-Black.svg') format('svg'); /* Legacy iOS */
+}
+
+html {
+  color: #222;
+  font-size: 10px;
+  line-height: 1.4;
+  overflow-x: hidden;
+  max-width: 100%;
+  box-sizing:border-box; }
+
+body{
+  background-color: #080808;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+h1,h2,h3,h4,h5,h6{
+  margin:0;
+  font-family:Helvetica, Arial, sans-serif;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; 
+  max-width: 100%;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.section-padding{
+  padding:60px 0;
+}
+.section-padding__sm{
+  padding:30px 0;
+}
+.text-center{
+  text-align: center;
+}
+.margin-bottom__sm{
+  margin-bottom: 30px;
+}
+.margin-bottom{
+  margin-bottom: 60px;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Hamburger Menu
+   ========================================================================== */
+
+  .hamburger-icon {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 40px;
+    height: 50px;
+    position: relative;
+    display: none;
+    margin: 0 auto;
+    padding-top:22px;
+  }
+  .hamburger-icon > .line {
+    display: block;
+    background: #fafafa;
+    width: 40px;
+    height: 4px;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 5px;
+    transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+  }
+  .hamburger-icon > .line:nth-child(1) {
+    margin-bottom: 8px;
+  }
+  .hamburger-icon > .line:nth-child(3) {
+    margin-top: 8px;
+  }
+  .hamburger-icon:hover .line:nth-child(1), .hamburger-icon:focus .line:nth-child(1) {
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+  }
+  .hamburger-icon:hover .line:nth-child(3), .hamburger-icon:focus .line:nth-child(3) {
+    transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+  }
+  .hamburger-icon:active .line:nth-child(1) {
+    transform: translateY(13px) translateX(0) rotate(45deg);
+    -webkit-transform: translateY(13px) translateX(0) rotate(45deg);
+    -moz-transform: translateY(13px) translateX(0) rotate(45deg);
+  }
+  .hamburger-icon:active .line:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-icon:active .line:nth-child(3) {
+    transform: translateY(-12px) translateX(0) rotate(-45deg);
+    -webkit-transform: translateY(-12px) translateX(0) rotate(-45deg);
+    -moz-transform: translateY(-12px) translateX(0) rotate(-45deg);
+  }
+  .hamburger-icon.active .line:nth-child(1) {
+    transform: translateY(12px) translateX(0) rotate(45deg);
+    -webkit-transform: translateY(12px) translateX(0) rotate(45deg);
+    -moz-transform: translateY(12px) translateX(0) rotate(45deg);
+  }
+  .hamburger-icon.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-icon.active .line:nth-child(3) {
+    transform: translateY(-12px) translateX(0) rotate(-45deg);
+    -webkit-transform: translateY(-12px) translateX(0) rotate(-45deg);
+    -moz-transform: translateY(-12px) translateX(0) rotate(-45deg);
+  }
+
+/* ==========================================================================
+ PRELOADER CSS
+ ========================================================================== */
+
+body.loading{
+  overflow: hidden;
+}
+
+#loader{
+  opacity:0;
+  transition: 500ms all;
+  z-index: 1000;
+  pointer-events: none;
+  position: fixed;
+  background-color: black;
+}
+#loader.open{
+  opacity: 1;
+  pointer-events: all;
+}
+#loader .line{
+  height: 1px;
+  background-color: white;
+  transition: 2s all;
+  width:0px;
+}
+#loader .line.open{
+  width:100%;
+}
+
+.vertical--center {
+  margin: 0 auto;
+  background: white;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.vertical-center__element {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.preloader {
+  display: block;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  margin: 1px auto;
+  background: black;
+}
+.preloader--top {
+  top: 0;
+  -webkit-animation: preloaderCSSTop 2s infinite;
+  animation: preloaderCSSTop 2s infinite;
+}
+.preloader--top::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 1em;
+  height: 1em;
+  left: 1em;
+  background: black;
+  margin-left: 1px;
+  -webkit-animation: preloaderCSSTopAfter 2s infinite;
+  animation: preloaderCSSTopAfter 2s infinite;
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+}
+.preloader--bottom {
+  top: 0;
+  -webkit-animation: preloaderCSSBottom 2s infinite;
+  animation: preloaderCSSBottom 2s infinite;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+.preloader--bottom::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 1em;
+  left: 1em;
+  height: 1em;
+  background: black;
+  margin-left: 1px;
+  -webkit-animation: preloaderCSSTopAfter 2s infinite;
+  animation: preloaderCSSTopAfter 2s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+@-webkit-keyframes preloaderCSSTop {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes preloaderCSSTop {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: white;
+  }
+}
+@-webkit-keyframes preloaderCSSBottom {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: white;
+  }
+}
+@keyframes preloaderCSSBottom {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: white;
+  }
+}
+@-webkit-keyframes preloaderCSSTopAfter {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: white;
+  }
+}
+@keyframes preloaderCSSTopAfter {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: white;
+  }
+}
+@-webkit-keyframes preloaderCSSBottomAfter {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: white;
+  }
+}
+@keyframes preloaderCSSBottomAfter {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+
+
+/* ==========================================================================
+   CUSTOM CSS
+   ========================================================================== */
+
+/* Navigation */
+
+header{
+  padding:40px 0;
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 2;
+  border-bottom:1px solid rgba(255,255,255,0.2);
+}
+header h1{
+  color:white;
+  font-weight: bold;
+  font-size:32px;
+  text-transform: initial;
+}
+header .content{
+  padding:7px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+header nav{
+  float:right;
+}
+header nav ul {
+  display: flex;
+  align-items:center;
+  margin:0;
+  padding: 0;
+}
+header nav ul li{
+  list-style-type: none;
+}
+header img{
+  height:75px;
+  padding:10px;
+}
+header a{
+  padding:0px 0px 2px 0px;
+  margin:10px 15px;
+  text-transform: uppercase;
+  color:white;
+  position: relative;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+}
+header a:focus{
+  color: white;
+  text-decoration: none;
+}
+header a span{
+  position: absolute;
+  bottom:0;
+  left:0;
+  background: white;
+  height: 1px;
+  width:0px;
+  transition: all 500ms;
+}
+header a:hover span{
+  width:100%;
+}
+
+header .logo a{
+  margin:0;
+}
+.homepage .hero{
+  padding-top:0;
+}
+.hero{
+  padding-top: 150px;
+}
+.hero .video{
+  position: relative;
+  cursor:pointer;
+}
+.hero .video .overlay{
+  position: absolute;
+  bottom:40px;
+  left:40px;
+  max-width: 30%;
+  transition: all 200ms;
+}
+.hero .video .overlay:hover{
+  opacity:0.6
+}
+.hero .video .overlay img{
+  padding: 10px;
+  background-color: black;
+}
+.hero .video .overlay .new-video span{
+  background-color: white;
+  padding:3px;
+}
+.hero .video .watch-overlay{
+  position: absolute;
+  top:50%;
+  width:100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 300ms all;
+}
+.hero .video .watch-overlay.show{
+  opacity: 1;
+  pointer-events: all;
+}
+.hero .video .watch-overlay.show:hover{
+  opacity:0.6;
+}
+.hero .video .watch-overlay .watch-video{
+  color:white;
+  font-size: 28px;
+  text-align: center;
+}
+.hero .video .watch-overlay .watch-video a{
+  color:white;
+}
+.hero .video .watch-overlay .watch-video a span{
+  padding:10px 20px;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 5px;
+}
+
+.music{
+  background: url(../img/music-div-bg.jpg);
+  background-size: cover;
+}
+
+.music.page{
+  padding-top: 150px;
+}
+
+.music h2{
+  color:#69BEF4;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 22px;
+  font-weight:bold;
+}
+.music .song{
+  padding:10px;
+}
+.music .song .link{
+  border: 1px solid rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  padding: 10px 0px;
+  display: block;
+  color:white;
+  font-size: 16;
+  width:100px;
+  margin:0 auto;
+  text-align: center;
+  border-radius: 5px;
+  margin-top:20px;
+  transition: all 300ms;
+}
+.music .song .link:hover{
+  opacity:0.7;
+}
+.blog .blog-entries{
+  padding-top:150px;
+}
+.blog .blog-entries .post-date{
+  text-align:right;
+  color:#666;
+}
+.videos{
+  padding-top:150px;
+}
+.videos iframe{
+  max-width:1280px;
+  width:100%;
+}
+footer{
+  padding-top:100px;
+  padding-bottom:30px;
+}
+footer .social-icons{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+footer .social-icons img{
+  width:30px;
+  height:30px;
+  margin:5px;
+  opacity: 0.5;
+}
+footer .social-icons img:hover{
+  opacity:1;
+}
+
+
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+@media (max-width: 640px) {
+  header a {
+    display: block;
+    margin:0 15px;
+  }
+  header .content{
+    justify-content: center;
+  }
+  .hero .video .watch-overlay{
+    top:40%;
+  }
+  .hero .video .watch-overlay .watch-video{
+    font-size:22px;
+  }
+  .hero .video .overlay{
+    bottom:10px;
+    max-width:40%;
+  }
+  .song{
+    margin-bottom:30px;
+  }
+  .logo{
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  header{
+    padding: 25px 0 10px;
+  }
+  header a {
+    display: block;
+    margin:15px;
+  }
+  .col-xs-6{
+    width:100%;
+  }
+}

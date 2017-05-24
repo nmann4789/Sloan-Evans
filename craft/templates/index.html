@@ -1,0 +1,71 @@
+{#
+# sloan-evans.com Index Template
+# -------------------
+#
+# This template is loaded whenever http://sloanevans.com is
+# requested,
+#
+#}
+
+{# ----- Import Any Required Macros ----- #}
+
+
+{# ----- Prepare Data ----- #}
+
+
+{# ----- Build Page ----- #}
+
+{% include "headers/header.html" with {'pageTitle' : 'Sloan Evans Website', 'bodyClass': 'homepage'} %}
+<section class="home">
+  <div id="loader" class="vertical--center open">
+    <div class="vertical-center__element">
+      <div class="line"></div>
+    </div>
+  </div>
+  <div class="hero">
+    <div class="video">
+      <video id="hero-video" class="playing" loop>
+        <source src="video/trailer.mp4">
+      </video>
+      <div class="overlay">
+        <p class="new-video"><span>NEW MUSIC VIDEO</span></p>
+        <a href="https://www.youtube.com/watch?v=XZLOWfffmcQ" target="_blank">
+          <img src="img/in-the-night-title.png">
+        </a>
+      </div>
+      <div class="watch-overlay">
+        <p class="watch-video"><a href="https://www.youtube.com/watch?v=XZLOWfffmcQ" target="_blank"><span>WATCH VIDEO</span></a></p>
+      </div>
+    </div>
+  </div>
+  <div class="music section-padding">
+    <div class="container">
+      <div class="row margin-bottom">
+        <div class="col-md-12">
+          <h2 class="text-center">Music</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="song">
+            <a href="https://soundcloud.com/sloanevans/inthenight" target="_blank"><img src="img/in-the-night.jpg" alt="In The Night - Sloan Evans"></a>
+            <a href="https://soundcloud.com/sloanevans/inthenight" target="_blank" class="link">Listen</a>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="song">
+            <a href="https://soundcloud.com/sloanevans/one-thing" target="_blank"><img src="img/one-thing.jpg" alt="One Thing - Sloan Evans"></a>
+            <a href="https://soundcloud.com/sloanevans/one-thing" target="_blank" class="link">Listen</a>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="song">
+            <a href="https://soundcloud.com/sloanevans/nomore" target="_blank"><img src="img/no-more.jpg" alt="No More - Sloan Evans"></a>
+            <a href="https://soundcloud.com/sloanevans/nomore" target="_blank" class="link">Listen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% include "footers/footer.html" %}

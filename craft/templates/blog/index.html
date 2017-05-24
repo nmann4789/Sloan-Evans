@@ -1,0 +1,45 @@
+{#
+# sloan-evans.com Blog Index Template
+# -------------------
+#
+# This template is loaded whenever http://sloan-evans.com is
+# requested,
+#
+#}
+
+{# ----- Import Any Required Macros ----- #}
+
+
+{# ----- Prepare Data ----- #}
+
+
+{% paginate craft.entries.section('blog').limit(10) as pageInfo, pageEntries %}
+
+
+{# ----- Build Page ----- #}
+
+{% include "headers/header.html" with {'pageTitle' : 'Blog - Sloan Evans Website', 'bodyClass':'blog'} %}
+
+{% if craft.request.getPageNum() == 1 %}
+<section class="blog-entries">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        {% for entry in pageEntries %}
+        <div class="blog-entry">
+          {{entry.body}}
+          <div class="metadata">
+            <p class="post-date">
+              {{entry.postDate| date("M d, Y") }}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% include "footers/footer.html" %}
+
